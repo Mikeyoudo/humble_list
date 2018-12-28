@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>	
+	<meta charset = "UTF-8">
+	<meta name = "viewpoert" content = "width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content = "ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+	<title> My humble list </title>
+ 
+<body>
+	<div class = "container">
+		<h1 class = "center-align">
+			just a humble list
+		</h1>
+		<input type = "text" id = "filterInput" placeholder = "Search names...">
+		<ul id = "names" class = "collection with-header">
+			<li class = "collection-header">
+				<h5>A</h5>
+			</li>
+				<li class = "collection-item">
+					<a href = "#"> Able </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Apple </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Abridge </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Alphabet </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Alberta </a>	
+				</li>
+
+			<li class = "collection-header">
+				<h5>B</h5>
+			</li>
+				<li class = "collection-item">
+				<a href = "#"> Bravo</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Bradley </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Brad </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Bat </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Baseball </a>	
+				</li>
+
+			<li class = "collection-header">
+				<h5>C</h5>
+			</li>
+
+				<li class = "collection-item">
+					<a href = "#"> Charlie </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Charles </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Charle</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Courtney </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Corporal </a>	
+				</li>
+
+			<li class = "collection-header">
+				<h5>D</h5>
+			</li>
+
+				<li class = "collection-item">
+					<a href = "#"> Delta </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Daryl </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Dinosaur</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Dynamo </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Dynamo </a>	
+				</li>
+
+
+		<li class = "collection-header">
+				<h5>E</h5>
+			</li>
+
+				<li class = "collection-item">
+					<a href = "#"> Episolon </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Eicholon </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Echelon</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Elemental </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Elephant </a>	
+				</li>
+
+
+
+		<li class = "collection-header">
+				<h5>F</h5>
+			</li>
+
+				<li class = "collection-item">
+					<a href = "#"> Farro </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Flying </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Flyer</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Flamingo </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Fire </a>	
+				</li>
+
+
+
+		<li class = "collection-header">
+				<h5>G</h5>
+			</li>
+
+				<li class = "collection-item">
+					<a href = "#"> God</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Gorilla </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Good</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Godzilla </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Gordana </a>	
+				</li>
+
+
+
+		<li class = "collection-header">
+				<h5>H</h5>
+			</li>
+				<li class = "collection-item">
+					<a href = "#"> Hatron </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Hat </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Hatter</a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Happy </a>	
+				</li>
+				<li class = "collection-item">
+					<a href = "#"> Happier </a>	
+				</li>
+
+<script>
+let filterInput = document.getElementById('filterInput');
+//add event listener
+	//addEventListener lets you do sometehing useful
+filterInput.addEventListener('keyup', filterNames);
+function filterNames() {
+	//get value of input
+	let filterValue = document.getElementById('filterInput').value.toUpperCase();
+	// get names ul
+	let ul = document.getElementById('names');
+	//get lis from ul
+	let li = ul.querySelectorAll('li.collection-item');
+	//loop through collection-item lists you made in your html
+	for (let i = 0; i < li.length; i++) {
+		let a = li[i].getElementsByTagName('a')[0];
+		//if matched
+		if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+			li[i].style.display = '';
+		} else {
+			li[i].style.display = 'none';
+		}
+	}
+}
+</script>
+		</ul>
+	</div>
+</body>
+</html>
+
+	 
